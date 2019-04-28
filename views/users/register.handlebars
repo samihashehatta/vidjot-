@@ -1,0 +1,31 @@
+
+
+<div class="row mt-5">
+    <div class="col-md-6 mx-auto">
+        <div class="card card-body">
+            <h3 class="text-center">
+                Join Us .
+            </h3>
+            <form action="/users/register" method="POST">
+                <div class="form-group">
+                    <label for="text">Name:</label>
+                    <input type="text" value="{{name}}" name="name" required class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" value="{{email}}" name="email" required class="form-control">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Password:</label>
+                    <input type="password" value="{{password}}" name="password" required class="form-control">
+                </div>
+                  <div class="form-group">
+                    <label for="email">Confirm Password:</label>
+                    <input type="password" value="{{password2}}" name="password2" required class="form-control">
+                </div>
+                <button class="btn btn-lg btn-block " type="submit"> SUBMIT</button>
+            </form>
+        </div>
+    </div>
+</div>

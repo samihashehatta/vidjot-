@@ -1,0 +1,46 @@
+  <nav class="navbar navbar-expand-sm navbar-light mb-3" style="background-color: #261822; ">
+  <div class="container">
+     <a class="navbar-brand text-white" href="/">VidJot</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+     </button>
+
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link text-white" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="/about">about</a>
+      </li>
+   
+    </ul>
+      <ul class="navbar-nav ml-auto">
+        {{#if user}}
+
+         <li class="nav-item">
+          <a href="/" class="nav-link text-white">hello, {{user.name}}</a>
+        </li>
+       <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown" id="navbarDropdownMenuLink" >
+          videoo idea
+         </a>
+         <div class="dropdown-menu">
+           <a href="/ideas" class="dropdown-item text-whit">ALL ideas</a>
+           <a href="/ideas/add" class="dropdown-item text-whit">Add idea</a>
+           <a href="/users/logout" class="dropdown-item text-whit">Logout</a>
+         </div>
+       </li>
+       {{else}}
+       <li class="nav-item">
+          <a href="/users/login" class="nav-link text-white">Login</a>
+        </li>
+        <li class="nav-item">
+          <a href="/users/register" class="nav-link text-white">Join us</a>
+        </li>
+       {{/if}}
+
+     </ul>
+    </div>
+  </div>
+</nav>
